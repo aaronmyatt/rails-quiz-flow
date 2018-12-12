@@ -1,2 +1,6 @@
 <h1>Questions#index</h1>
-<p>Find me in app/views/questions/index.html.erb</p>
+
+<%= form_tag( '/questions/form' , remote: true, method: 'post') do |f| %>
+    <div><%= submit_tag 'Save' %></div>
+<% end %>
+  
