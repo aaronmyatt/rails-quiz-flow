@@ -1,0 +1,10 @@
+<%= form_tag( '/drilldown/form' , remote: true, method: 'post') do |f| %>
+    <%= label_tag "Feel younger" %>
+    <%= check_box_tag "drilldown[feel_younger]", "feel_younger" %>
+
+    <%= label_tag "Better endurance" %>
+    <%= check_box_tag "drilldown[better_endurance]", "better_endurance" %>
+    <div>
+        <%= submit_tag 'Save' %>
+    </div>
+<% end %>

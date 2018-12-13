@@ -1,3 +1,11 @@
 <h1>Drilldown#index</h1>
+<h2>Please Choose A More Specific Area</h2>
+ 
+<% if @category == "sleep" %>
+    <%= render "sleep" %>
 
-<a class="button" href="<%= questions_index_path %>"> Next Screen </a> 
+
+<% elsif @category == "health" %>
+    <%= render "health" %>
+
+<% end %>

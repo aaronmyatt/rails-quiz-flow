@@ -1,3 +1,15 @@
 <h1>Category#index</h1>
 
-<a class="button" href="<%= drilldown_index_path %>"> Next Screen </a>
+<h2>Please Choose The Area You Would Like To Improve</h2>
+<h3> Please choose only 4 options </h3>
+<%= form_tag( '/category/form' , remote: true, method: 'post') do |f| %>
+    <% for i in 1..16 do %>
+        <%= label_tag "Category #{i}" %>
+        <%= check_box_tag "category", "category#{i}" %>
+    <% end %>
+    <br>
+    <br>
+    <div>
+        <%= submit_tag 'Save' %>
+    </div>
+<% end %>
