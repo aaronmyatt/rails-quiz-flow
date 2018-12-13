@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   def index
     @question=[]
     session[:drilldown].each do |drilldown|
-      for i in 1..4 do
+      for i in 1..2 do
         @question.push("#{drilldown}question#{i}")
       end
     end
