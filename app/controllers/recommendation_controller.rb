@@ -1,5 +1,5 @@
 class RecommendationController < ApplicationController
   def index
-    @category = sessions[:category]
+    @category = session[:category]
   end
 end

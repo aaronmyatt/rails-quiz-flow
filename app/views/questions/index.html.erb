@@ -1,8 +1,14 @@
 <h1>Questions#index</h1>
 
-<% if @category == "sleep" %>
-    <%= render "sleep" %>
-<% elsif @category == "health" %>
-    <%= render "health" %>
+<%= form_tag( '/questions/form' , remote: true, method: 'post') do |f| %>
+    <% @question.each do |q| %>
+        <%= label_tag q.capitalize %>
+        <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+        <br>
+        <br>
+    <% end %>
+    <div>
+        <%= submit_tag 'Save' %>
+    </div>
 <% end %>
   

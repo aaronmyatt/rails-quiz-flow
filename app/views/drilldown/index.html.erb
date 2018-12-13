@@ -1,11 +1,16 @@
 <h1>Drilldown#index</h1>
 <h2>Please Choose A More Specific Area</h2>
- 
-<% if @category == "sleep" %>
-    <%= render "sleep" %>
+ <h3> Please pick only 4 options </h3>
 
 
-<% elsif @category == "health" %>
-    <%= render "health" %>
-
+<%= form_tag( '/drilldown/form' , remote: true, method: 'post') do |f| %>
+    <% @drilldown.each do |dd| %>
+        <%= label_tag dd.capitalize %>
+        <%= check_box_tag "drilldown[]", dd %>
+    <% end %>
+    <br>
+    <br>
+    <div>
+        <%= submit_tag 'Save' %>
+    </div>
 <% end %>
