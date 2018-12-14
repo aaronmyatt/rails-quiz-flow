@@ -1,16 +1,49 @@
-<h1>Drilldown#index</h1>
-<h2>Please Choose A More Specific Area</h2>
- <h3> Please pick only 4 options </h3>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Drilldown Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+         Please Choose A More Specific Area
 
+      </h1>
+      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="/category/index" >Category</a></li>
+          <li class="is-active"><a href="/drilldown/index" aria-current="page">Drilldown</a></li>
+          <li><a href="/questions/index">Questions</a></li>
+          <li><a href="/reccomendation/index">Reccomendation</a></li>
+        </ul>
+      </nav>
+
+      <h3 class="subtitle">
+         Please choose only 4 options
+      </h3>
+    </div>
+  </section>
+
+    <div class="container">
 
 <%= form_tag( '/drilldown/form' , remote: true, method: 'post') do |f| %>
     <% @drilldown.each do |dd| %>
+    <ul>
         <%= label_tag dd.capitalize %>
         <%= check_box_tag "drilldown[]", dd %>
+     </ul>
     <% end %>
     <br>
-    <br>
-    <div>
-        <%= submit_tag 'Save' %>
-    </div>
+    <button class="button is-link">
+        Save
+    </button>
 <% end %>
+
+</div>
+  </body>
+</html>

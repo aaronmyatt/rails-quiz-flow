@@ -1,15 +1,48 @@
-<h1>Category#index</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Category Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+       Please Choose The Area You Would Like To Improve
+      </h1>
+      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+        <ul>
+          <li class="is-active"><a href="/category/index" aria-current="page">Category</a></li>
+          <li><a href="/drilldown/index">Drilldown</a></li>
+          <li><a href="/questions/index">Questions</a></li>
+          <li><a href="/Reccomendation/index">Reccomendation</a></li>
+        </ul>
+      </nav>
 
-<h2>Please Choose The Area You Would Like To Improve</h2>
-<h3> Please choose only 4 options </h3>
+      <h3 class="subtitle">
+         Please choose only 4 options
+
+      </h3>
+    </div>
+<br>
+
+    <div class="container">
+
 <%= form_tag( '/category/form' , remote: true, method: 'post') do |f| %>
     <% for i in 1..16 do %>
+    <div class>
         <%= label_tag "Category #{i}" %>
         <%= check_box_tag "category[]", "category#{i}" %>
-    <% end %>
-    <br>
-    <br>
-    <div>
-        <%= submit_tag 'Save' %>
     </div>
+    <% end %>
+    <button class="button is-link">
+        Save
+    </button>
+
 <% end %>
+</div>
+  </body>
+</html>
