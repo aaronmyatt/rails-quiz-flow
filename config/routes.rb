@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root 'category#index'
+  root 'home#index'
 
+  get 'home/index'
   get 'questions/index'
   get 'drilldown/index'
   get 'category/index'
