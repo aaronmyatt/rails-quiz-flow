@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'category/index'
   get 'recommendation/index'
 
+  post 'home/form'
   post 'questions/form'
   post 'category/form'
   post 'drilldown/form'
