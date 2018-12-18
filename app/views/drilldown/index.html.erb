@@ -32,18 +32,21 @@
     <div class="container">
 
 <%= form_tag( '/drilldown/form' , remote: true, method: 'post') do |f| %>
-    <% @drilldown.each do |dd| %>
-    <ul>
-        <%= label_tag dd.capitalize %>
-        <%= check_box_tag "drilldown[]", dd %>
-     </ul>
-    <% end %>
+<div class = "columns">
+      <div class = "column">
+      <% @drilldown.each do |x| %>
+      <%= label_tag x.capitalize %>
+       <%= check_box_tag "drilldown[]", x %>
+      <% end %>
+        </div>
+
+</div>
+
     <br>
     <button class="button is-link">
         Save
     </button>
 <% end %>
-
 </div>
   </body>
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
+
   <body>
   <section class="section">
     <div class="container">
@@ -29,20 +30,44 @@
     </div>
 <br>
 
-    <div class="container">
+    <div class="container" >
+
 
 <%= form_tag( '/category/form' , remote: true, method: 'post') do |f| %>
-    <% for i in 1..16 do %>
-    <div class>
-        <%= label_tag "Category #{i}" %>
-        <%= check_box_tag "category[]", "category#{i}" %>
-    </div>
+    <div class = "columns">
+    <div class = "column">
+    <% @columns1.each do |x| %>
+      <%= label_tag "Category #{x}" %>
+      <%= check_box_tag "category[]", "category#{x}" %>
     <% end %>
-    <button class="button is-link">
-        Save
-    </button>
+      </div>
+    <div class = "column">
+    <% @columns2.each do |x| %>
+      <%= label_tag "Category #{x}" %>
+      <%= check_box_tag "category[]", "category#{x}" %>
+    <% end %>
+    </div>
+    <div class = "column">
+    <% @columns3.each do |x| %>
+      <%= label_tag "Category #{x}" %>
+      <%= check_box_tag "category[]", "category#{x}" %>
+    <% end %>
+  </div>
+  <div class = "column">
+  <% @columns4.each do |x| %>
+    <%= label_tag "Category #{x}" %>
+    <%= check_box_tag "category[]", "category#{x}" %>
+  <% end %>
+</div>
+
+  </div>
+  <br>
+  <button class="button is-link ">
+      Save
+  </button>
+  </div>
+
 
 <% end %>
-</div>
   </body>
 </html>
