@@ -32,16 +32,56 @@
     <div class="container">
 
 <%= form_tag( '/drilldown/form' , remote: true, method: 'post') do |f| %>
-<div class = "columns">
-      <div class = "column">
-      <% @drilldown.each do |x| %>
-      <%= label_tag x.capitalize %>
-       <%= check_box_tag "drilldown[]", x %>
-      <% end %>
-        </div>
 
+        <div class = "columns">
+        <div class = "column">
+        <ul>
+          <% @drilldown1.each do |x| %>
+            <li>
+              <%= label_tag x.capitalize %>
+            <%= check_box_tag "drilldown[]", x %>
+            </li>
+          <% end %>
+        </ul>
+          </div>
+
+          <div class = "column">
+
+          <ul>
+          <% @drilldown2.each do |x| %>
+            <li>
+              <%= label_tag x.capitalize %>
+             <%= check_box_tag "drilldown[]", x %>
+
+            </li>
+            <% end %>
+        </ul>
+            </div>
+
+            <div class = "column">
+            <ul>
+             <% @drilldown3.each do |x| %>
+              <li>
+                <%= label_tag x.capitalize %>
+               <%= check_box_tag "drilldown[]", x %>
+              </li>
+              <% end %>
+          </ul>
+              </div>
+
+              <div class = "column">
+
+              <ul>
+               <% @drilldown4.each do |x| %>
+                <li>
+                  <%= label_tag x.capitalize %>
+                 <%= check_box_tag "drilldown[]", x %>
+
+                </li>
+                <% end %>
+            </ul>
+                </div>
 </div>
-
     <br>
     <button class="button is-link">
         Save
