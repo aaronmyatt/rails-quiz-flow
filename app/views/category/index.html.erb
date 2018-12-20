@@ -34,13 +34,21 @@
 
 
 <%= form_tag( '/category/form' , remote: true, method: 'post') do |f| %>
+
     <div class = "columns">
     <div class = "column">
+    
     <ul>
     <% @columns1.each do |x| %>
     <li>
-      <%= label_tag "Category #{x}" %>
-      <%= check_box_tag "category[]", "category#{x}" %>
+    <div id="check-button">
+      <label>
+         <%= check_box_tag "category[]", "category#{x}"  %>
+          <span><%= label_tag "Category #{x}" %></span>  
+      </label>
+     
+      </div>
+      
     </li>
     <% end %>
     </ul>
@@ -49,8 +57,12 @@
     <ul>
       <% @columns2.each do |x| %>
         <li>
-          <%= label_tag "Category #{x}" %>
-          <%= check_box_tag "category[]", "category#{x}" %>
+          <div id="check-button">
+            <label>
+              <%= check_box_tag "category[]", "category#{x}" %>
+              <span><%= label_tag "Category #{x}" %></span>  
+            </label>
+          </div>
         </li>
       <% end %>
     </ul>
@@ -59,8 +71,12 @@
     <ul>
       <% @columns3.each do |x| %>
         <li>
-          <%= label_tag "Category #{x}" %>
-          <%= check_box_tag "category[]", "category#{x}" %>
+          <div id="check-button">
+            <label>
+              <%= check_box_tag "category[]", "category#{x}" %>
+              <span><%= label_tag "Category #{x}" %></span>  
+            </label>
+          </div>
         </li>
       <% end %>
     </ul>
@@ -69,8 +85,12 @@
   <ul>
     <% @columns4.each do |x| %>
       <li>
-        <%= label_tag "Category #{x}" %>
-        <%= check_box_tag "category[]", "category#{x}" %>
+        <div id="check-button">
+            <label>
+              <%= check_box_tag "category[]", "category#{x}" %>
+              <span><%= label_tag "Category #{x}" %></span>  
+            </label>
+          </div>
       </li>
     <% end %>
   </ul>
