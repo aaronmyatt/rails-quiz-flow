@@ -38,8 +38,12 @@
         <ul>
           <% @drilldown1.each do |x| %>
             <li>
-              <%= label_tag x.capitalize %>
-            <%= check_box_tag "drilldown[]", x %>
+              <div id="check-button">
+                <label>
+                  <%= check_box_tag "drilldown[]", x %>
+                  <span> <%= x.capitalize %> </span>
+                </label>
+              </div>           
             </li>
           <% end %>
         </ul>
@@ -50,9 +54,12 @@
           <ul>
           <% @drilldown2.each do |x| %>
             <li>
-              <%= label_tag x.capitalize %>
-             <%= check_box_tag "drilldown[]", x %>
-
+              <div id="check-button">
+                <label>
+                  <%= check_box_tag "drilldown[]", x %>
+                  <span> <%= x.capitalize %> </span>
+                </label>
+              </div>
             </li>
             <% end %>
         </ul>
@@ -62,8 +69,12 @@
             <ul>
              <% @drilldown3.each do |x| %>
               <li>
-                <%= label_tag x.capitalize %>
-               <%= check_box_tag "drilldown[]", x %>
+                <div id="check-button">
+                  <label>
+                    <%= check_box_tag "drilldown[]", x %>
+                    <span><%= x.capitalize %></span>
+                  </label>
+                </div>
               </li>
               <% end %>
           </ul>
@@ -74,9 +85,12 @@
               <ul>
                <% @drilldown4.each do |x| %>
                 <li>
-                  <%= label_tag x.capitalize %>
-                 <%= check_box_tag "drilldown[]", x %>
-
+                  <div id="check-button">
+                    <label>
+                      <%= check_box_tag "drilldown[]", x %>
+                      <span><%= x.capitalize %></span>
+                    </label>
+                  </div>
                 </li>
                 <% end %>
             </ul>

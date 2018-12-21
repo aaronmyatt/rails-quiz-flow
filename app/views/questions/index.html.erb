@@ -28,12 +28,56 @@
 
     <div class="container">
 <%= form_tag( '/questions/form' , remote: true, method: 'post') do |f| %>
-    <% @question.each do |q| %>
-        <%= label_tag q.capitalize %>
-        <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
-        <br>
-        <br>
-    <% end %>
+  <div class = "columns">
+    <div class = "column">
+      <ul>
+        <% @questions1.each do |q| %>
+          <li>
+            <%= label_tag q.capitalize %>
+            <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+            <br>
+            <br>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class = "column">
+      <ul>
+        <% @questions2.each do |q| %>
+          <li>
+          <%= label_tag q.capitalize %>
+          <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+          <br>
+          <br>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class = "column">
+      <ul>    
+        <% @questions3.each do |q| %>
+          <li>        
+            <%= label_tag q.capitalize %>
+            <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+            <br>
+            <br>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class = "column">
+      <ul>
+        <% @questions4.each do |q| %>
+        <li>
+          <%= label_tag q.capitalize %>
+          <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+          <br>
+          <br>
+        </li>
+          <% end %>
+      </ul>
+    </div>
+</div>
    <button class="button is-link">
         Save
     </button>
