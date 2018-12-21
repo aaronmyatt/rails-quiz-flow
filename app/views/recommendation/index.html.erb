@@ -28,8 +28,29 @@
     <div class="container">
 
 <p class="subtitle">
+       The Categories you have chosen:
+       <div class = "column">
+       <%= render "categories" %>
+       </div>
+      </p>
+
+      <p class="subtitle">
+       The Drilldowns for the chosen Categories:
+       <div class = "column">
+       <%= render "drilldowns" %>
+       </div>
+     </p>
+
+      <p class="subtitle">
+       The Questions and their ratings for the selected drilldowns:
+       <div class = "column">
+       <%= render "questions" %>
+       </div>
+      </p>
+
+      <p class="subtitle">
        The Smartest Reccomendation For You Would Be For You To Have The Honour Of Consuming The Following Products
-       <div class = "column"
+       <div class = "column">
        <%= render "products" %>
        </div>
         <br>
