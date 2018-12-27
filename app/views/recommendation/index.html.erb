@@ -27,29 +27,8 @@
 
     <div class="container">
 
-<p class="subtitle">
-       The Categories you have chosen:
-       <div class = "column">
-       <%= render "categories" %>
-       </div>
-      </p>
-
       <p class="subtitle">
-       The Drilldowns for the chosen Categories:
-       <div class = "column">
-       <%= render "drilldowns" %>
-       </div>
-     </p>
-
-      <p class="subtitle">
-       The Questions and their ratings for the selected drilldowns:
-       <div class = "column">
-       <%= render "questions" %>
-       </div>
-      </p>
-
-      <p class="subtitle">
-       The Smartest Reccomendation For You Would Be For You To Have The Honour Of Consuming The Following Products
+       <strong>The Smartest Reccomendation For You Would Be For You To Have The Honour Of Consuming The Following Products </strong>
        <div class = "column">
        <%= render "products" %>
        </div>
@@ -57,6 +36,36 @@
        The Smart Reccomendation Engine Has Faith In You & The Reccomended Products.<strong>Good Luck </strong>.
 
       </p>
+      <br>
+
+       <div class = "columns">
+        <div class = "column">
+          <p class="subtitle">
+          <strong> The Categories you have chosen: </strong>
+          <div class = "column">
+          <%= render partial: "categories", locals: {category_list: @category} %>
+          </div>
+          </p>
+        </div>
+
+      <div class = "column">
+        <p class="subtitle">
+        <strong>The Drilldowns for the chosen Categories:</strong>
+        <div class = "column">
+        <%= render partial: "drilldowns", locals: {drilldown_list: @drilldown} %>
+        </div>
+        </p>
+      </div>
+
+      <div class = "column">
+        <p class="subtitle">
+        <strong>The Questions and their ratings for the selected drilldowns:</strong>
+        <div class = "column">
+        <%= render partial: "questions", locals: {questions_list: @questions} %>
+        </div>
+        </p>
+      </div> 
+    </div>
 
 </div>
   </body>

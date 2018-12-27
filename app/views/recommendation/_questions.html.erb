@@ -1,8 +1,7 @@
 <ol>
-  <% question_list = Question.find_by_sql ["SELECT name,rating FROM questions WHERE user_id = ?", User.last.id] %>
-  <% question_list.each do |x|  %>
+  <% questions_list.each do |questions,rating|  %>
     <li>
-        <%= x.name %>: with a rating of  <%= x.rating %>
+        <%= questions %>: with a rating of  <%= rating %>
     </li>
     <% end %>
 </ol>

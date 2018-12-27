@@ -1,9 +1,8 @@
 
 <ol>
-  <% category_list = Category.find_by_sql ["SELECT name FROM categories WHERE user_id = ?", User.last.id] %>
-  <% category_list.each do |x|  %>
+  <% category_list.each do |category|  %>
     <li>
-        <%=  x.name %>
+        <%= category %>
     </li>
     <% end %>
 </ol>

@@ -1,8 +1,7 @@
 <ol>
-  <% drill_list = Drilldown.find_by_sql ["SELECT name FROM drilldowns WHERE user_id = ?", User.last.id] %>
-  <% drill_list.each do |x|  %>
+  <% drilldown_list.each do |drilldown|  %>
     <li>
-        <%=  x.name %>
+        <%=  drilldown %>
     </li>
     <% end %>
 </ol>
