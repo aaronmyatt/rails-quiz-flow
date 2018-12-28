@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_12_21_031457) do
+=======
+
+ActiveRecord::Schema.define(version: 2018_12_28_073652) do
+>>>>>>> Started working on the admin dashboard. Added admin controller and model
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -20,6 +25,16 @@ ActiveRecord::Schema.define(version: 2018_12_21_031457) do
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "category_admins", force: :cascade do |t|
+    t.string "name"
+    t.string "added_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> Started working on the admin dashboard. Added admin controller and model
   create_table "drilldowns", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
