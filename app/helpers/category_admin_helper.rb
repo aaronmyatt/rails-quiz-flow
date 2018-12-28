@@ -1,0 +1,2 @@
+module CategoryAdminHelper
+end
