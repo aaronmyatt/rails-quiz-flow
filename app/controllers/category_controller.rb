@@ -11,8 +11,8 @@ class CategoryController < ApplicationController
   def form
     
     category_session = session[:category]=params[:category]
-    category_session.each do |c|
-      name = Category.create(name: c, user_id: session[:user])
+    category_session.each do |category|
+      name = Category.create(name: category, user_id: session[:user])
     end
     redirect_to '/drilldown/index'
   end
