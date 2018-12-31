@@ -4,9 +4,9 @@ class HomeController < ApplicationController
   end
 
   def form
-    session[:email]=params[:email]
-    @email = User.new(email: params["email"])
-    @email.save
+    user = User.new(email: params["email"])
+    user.save
+    session[:user]=user.id
     redirect_to '/category/index'
   end
 

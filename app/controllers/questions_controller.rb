@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+
   def index
     question=[]
     session[:drilldown].each do |drilldown|
@@ -14,7 +15,10 @@ class QuestionsController < ApplicationController
   end
 
   def form
-    session[:questions]=params[:questions]
+    question_session = session[:questions] = params[:questions]
+    question_session.each do |key, value|
+      question_details = Question.create(name: key, rating: value, user_id: session[:user])
+    end
     redirect_to "/recommendation/index"
   end
 

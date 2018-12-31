@@ -9,14 +9,17 @@ class DrilldownController < ApplicationController
       end
 
        @drilldown1 = drilldown[0..3]
-       @drilldown2 =drilldown[4..7]
-       @drilldown3 =drilldown[8..11]
-       @drilldown4 =drilldown[12..15]
+       @drilldown2 = drilldown[4..7]
+       @drilldown3 = drilldown[8..11]
+       @drilldown4 = drilldown[12..15]
        
   end
 
   def form
-    session[:drilldown]=params[:drilldown]
+    drilldown_session = session[:drilldown]=params[:drilldown]
+    drilldown_session.each do |drilldown|
+      name = Drilldown.create(name: drilldown, user_id: session[:user])
+    end
     redirect_to "/questions/index"
   end
 end

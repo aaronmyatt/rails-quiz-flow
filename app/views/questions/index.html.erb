@@ -34,7 +34,7 @@
         <% @questions1.each do |q| %>
           <li>
             <%= label_tag q.capitalize %>
-            <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+            <%= select_tag "questions[#{q}]", options_for_select(1..10, 5) %>
             <br>
             <br>
           </li>
@@ -46,7 +46,7 @@
         <% @questions2.each do |q| %>
           <li>
           <%= label_tag q.capitalize %>
-          <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+          <%= select_tag "questions[#{q}]", options_for_select(1..10, 5) %>
           <br>
           <br>
           </li>
@@ -58,7 +58,7 @@
         <% @questions3.each do |q| %>
           <li>        
             <%= label_tag q.capitalize %>
-            <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+            <%= select_tag "questions[#{q}]", options_for_select(1..10, 5) %>
             <br>
             <br>
           </li>
@@ -70,7 +70,7 @@
         <% @questions4.each do |q| %>
         <li>
           <%= label_tag q.capitalize %>
-          <%= select_tag 'questions[]', options_for_select(1..10, 5) %>
+          <%= select_tag "questions[#{q}]", options_for_select(1..10, 5) %>
           <br>
           <br>
         </li>
