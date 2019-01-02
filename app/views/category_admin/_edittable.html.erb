@@ -8,8 +8,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-  <h3 class="title is-3">Create New Category</h3>
-   <%= form_with model: @category_admin,url: {action: "create"} do |form| %> 
+   <%= form_for @edit_category_admins, local: true do |form| %> 
     <table class="table">
       <thead>
         <tr>
@@ -21,10 +20,12 @@
         <tr>
           <td> <%= form.text_field :name %></td>
           <td> 
-          <button class="button is-success submit">Create</button>
+          <div id="button-format">
+          <button class="button is-success submit"> Update</button>
+          </div>
           </td>
         </tr>
-        </tbody>
+      </tbody>
     </table>
    <% end %>
   </body>

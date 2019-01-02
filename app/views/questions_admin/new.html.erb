@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+
+  <body>
+  <%= form_with model: @questions_admin, local: true do |form| %>
+    <%# <div id="add-button">
+      <button class="button is-success">Add Category</button>
+    </div> %>
+    <table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="ID">ID</abbr></th>
+      <th><abbr title="Question">Category Name</abbr></th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td> <input type ="text" name="Drilldown Name" value="Drilldown Name"></td>
+      <td>Drilldown 1</td>
+      <td> </button>
+      <button class="button is-success">Add Drilldown</button>
+      </td>
+   </tr>
+  </tbody>
+</table>
+<% end %>
+
+</body>
+</html>

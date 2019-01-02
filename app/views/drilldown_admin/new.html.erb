@@ -1,0 +1,43 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+
+  <body>
+  <%= form_with model: @drilldown_admin, local: true do |form| %>
+  <%# <%= form_with scope: :category_admin, url: articles_path, local: true do |form| %> 
+     <!-- <div id="add-button">
+      <button class="button is-success">Add Category</button>
+    </div> -->
+    <table class="table">
+  <thead>
+    <tr>
+       <th><abbr <%= form.label :ID %><br></abbr></th>
+       <th><abbr <%= form.label :Category_Name %><br></abbr></th>
+       <th><abbr <%= form.label :Drilldown_Name %><br></abbr></th>
+      <th>Options</th>
+     </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <name ="id"> 1  </td>
+       <td> <%= form.text_field :category_name %></td>
+      <td><%= form.text_field :drilldown_name %></td>
+      <td>
+        <button class="button is-success submit">Add Drilldown</button>
+       <p>
+   
+  </p>
+      </td>
+   </tr>
+  </tbody>
+</table>
+ <% end %>
+
+ </body>
+ </html>
