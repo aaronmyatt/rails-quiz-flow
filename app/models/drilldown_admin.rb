@@ -1,0 +1,2 @@
+class DrilldownAdmin < ApplicationRecord
+end

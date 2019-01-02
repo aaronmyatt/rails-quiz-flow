@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
+
   <body>
-  <h3 class="title is-3">Category Admin Dashboard</h3>
   <%= form_with model: @category_admin, local: true do |category_admin| %>
-  <table class="table">
+    <div id="add-button">
+
+      <button class="button is-success"><%= link_to "Add Category", "new", id: 'link-color' %></button>
+    </div>
+    <table class="table">
   <thead>
     <tr>
       <th><abbr title="ID">ID</abbr></th>
       <th><abbr title="Category Name">Category Name</abbr></th>
       <th><abbr title="Added By">Added By</abbr></th>
       <th>Options</th>
-      <th>
-        <div id="add-button">
-          <button class="button is-success"><%= link_to "Add Category", "new", id: 'link-color' %></button>
-        </div>
-      </th>
     </tr>
   </thead>
   <tbody>
@@ -30,15 +29,14 @@
       <th><%= cat_admin.id %></th>
       <td><%= cat_admin.name %></td>
       <td><%= cat_admin.added_by %></td>
-      <td> <button class="button is-primary"><%= link_to 'Edit', edit_category_admin_path(cat_admin), id: 'link-color'%></button>
-      <button class="button is-danger"><%= link_to 'Destroy', category_admin_index_path(cat_admin),
-              method: :delete,
-              data: { confirm: 'Are you sure?' }, id: 'link-color' %></button>   
-      </td>      
+      <td> <button class="button is-primary" onclick ="location.href ='@Url.Action( "edit" ,"category_admin") '"> Edit </button>
+      <button class="button is-danger">Delete</button>
+      </td>
    </tr>
    <% end %>
   </tbody>
 </table>
 <% end %>
+
 </body>
 </html>
