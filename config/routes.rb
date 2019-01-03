@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-
-  get 'questions_admin/index'
-  get 'questions_admin/dashboard'
-  get 'questions_admin/new'
   get 'drilldown_admin/index'
   resources :user
 
@@ -11,10 +7,9 @@ Rails.application.routes.draw do
 
   get 'home/index'
   get 'questions/index'
-  get 'drilldown/index'
+  get 'drilldown/index' 
   get 'category/index'
   get 'recommendation/index'
-
 
   get 'category_admin/index'
   resources :category_admin
@@ -28,4 +23,6 @@ Rails.application.routes.draw do
   post "category_admin/index"
   post "drilldown_admin/new"
   post "category_admin/new"
+
+  resources :question_admin
 end

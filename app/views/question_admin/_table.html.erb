@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+
+  <body>
+  <%= form_with model: @question_admin, local: true do |questions_admin| %>
+    
+    <table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="ID">Q ID</abbr></th>
+      <th><abbr title="Category Name">Category Name</abbr></th>
+      <th><abbr title="Drilldown Name">Drilldown Name</abbr></th>
+      <th><abbr title="Question">Question</abbr></th>
+      <th>Options</th>
+      <th>
+        <div id="add-button">
+          <button class="button is-success"><%= link_to "Add Question", new_question_admin_path, id: 'link-color' %></button>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @questions.each do |question| %>
+    <tr>
+      <th><%= question.id %></th>
+      <td><%= question.category_name %></td>
+      <td><%= question.drilldown_name %></td>
+      <td><%= question.question %></td>
+      <td> <button class="button is-primary"><%= link_to 'Edit', edit_question_admin_path(question), id: 'link-color'%></button>
+        <button class="button is-danger">
+          <%= link_to 'Destroy', question_admin_path(question),
+                method: :delete,
+                data: { confirm: 'Are you sure?' },
+                id: 'link-color' %>
+        </button>   
+      </td>      
+   </tr>
+   <% end %>
+  </tbody>
+</table>
+<% end %>
+
+</body>
+</html>

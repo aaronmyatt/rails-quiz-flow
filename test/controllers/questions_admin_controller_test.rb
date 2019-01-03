@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class QuestionsAdminControllerTest < ActionDispatch::IntegrationTest
+class QuestionAdminControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get questions_admin_index_url
     assert_response :success

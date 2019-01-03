@@ -1,0 +1,2 @@
+class QuestionAdmin < ApplicationRecord
+end
