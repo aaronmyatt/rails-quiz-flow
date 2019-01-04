@@ -43,8 +43,8 @@
     <li>
     <div id="check-button">
       <label>
-         <%= check_box_tag "category[]", "category#{x}"  %>
-          <span> Category <%= x %></span>  
+         <%= check_box_tag x.name  %>
+          <span><%= x.name %></span>  
       </label>
      
       </div>
@@ -59,8 +59,8 @@
         <li>
           <div id="check-button">
             <label>
-              <%= check_box_tag "category[]", "category#{x}" %>
-              <span> Category <%= x %></span>  
+              <%= check_box_tag x.name %>
+              <span><%= x.name %></span>  
             </label>
           </div>
         </li>
@@ -73,8 +73,8 @@
         <li>
           <div id="check-button">
             <label>
-              <%= check_box_tag "category[]", "category#{x}" %>
-              <span> Category <%= x %></span>  
+              <%= check_box_tag x.name %>
+              <span><%= x.name %></span>  
             </label>
           </div>
         </li>
@@ -87,8 +87,8 @@
       <li>
         <div id="check-button">
             <label>
-              <%= check_box_tag "category[]", "category#{x}" %>
-              <span> Category <%= x %></span>  
+              <%= check_box_tag x.name %>
+              <span><%= x.name %></span>  
             </label>
           </div>
       </li>
