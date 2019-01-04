@@ -40,8 +40,8 @@
             <li>
               <div id="check-button">
                 <label>
-                  <%= check_box_tag "drilldown[]", x %>
-                  <span> <%= x.capitalize %> </span>
+                  <%= check_box_tag "drilldown[]", x.drilldown_name %>
+                  <span> <%= "#{x.category_name}:#{x.drilldown_name}" %> </span>
                 </label>
               </div>           
             </li>
@@ -56,8 +56,8 @@
             <li>
               <div id="check-button">
                 <label>
-                  <%= check_box_tag "drilldown[]", x %>
-                  <span> <%= x.capitalize %> </span>
+                  <%= check_box_tag "drilldown[]", x.drilldown_name %>
+                  <span> <%= "#{x.category_name}:#{x.drilldown_name}" %> </span>
                 </label>
               </div>
             </li>
@@ -71,8 +71,8 @@
               <li>
                 <div id="check-button">
                   <label>
-                    <%= check_box_tag "drilldown[]", x %>
-                    <span><%= x.capitalize %></span>
+                    <%= check_box_tag "drilldown[]", x.drilldown_name %>
+                    <span><%= "#{x.category_name}:#{x.drilldown_name}" %></span>
                   </label>
                 </div>
               </li>
@@ -87,8 +87,8 @@
                 <li>
                   <div id="check-button">
                     <label>
-                      <%= check_box_tag "drilldown[]", x %>
-                      <span><%= x.capitalize %></span>
+                      <%= check_box_tag "drilldown[]", x.drilldown_name %>
+                      <span><%= "#{x.category_name}:#{x.drilldown_name}" %></span>
                     </label>
                   </div>
                 </li>

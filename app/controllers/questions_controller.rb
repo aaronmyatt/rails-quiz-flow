@@ -1,16 +1,19 @@
 class QuestionsController < ApplicationController
 
   def index
-    question=[]
-    session[:drilldown].each do |drilldown|
-      for i in 1..2 do
-        question.push("#{drilldown}question#{i}")
-      end
-    end
-    @questions1 = question[0..1]
-    @questions2 = question[2..3]
-    @questions3 = question[4..5]
-    @questions4 = question[6..7]
+
+    all_questions = QuestionAdmin.take(8)
+    split = all_questions.each_slice(2).to_a
+    # question=[]
+    # session[:drilldown].each do |drilldown|
+    #   for i in 1..2 do
+    #     question.push("#{drilldown}:question#{i}")
+    #   end
+    # end
+    @questions1 = split.fetch(0)
+    @questions2 = split.fetch(1)
+    @questions3 = split.fetch(2)
+    @questions4 = split.fetch(3)
 
   end
 
