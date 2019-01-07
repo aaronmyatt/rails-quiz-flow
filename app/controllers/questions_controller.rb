@@ -4,12 +4,7 @@ class QuestionsController < ApplicationController
 
     all_questions = QuestionAdmin.take(8)
     split = all_questions.each_slice(2).to_a
-    # question=[]
-    # session[:drilldown].each do |drilldown|
-    #   for i in 1..2 do
-    #     question.push("#{drilldown}:question#{i}")
-    #   end
-    # end
+
     @questions1 = split.fetch(0)
     @questions2 = split.fetch(1)
     @questions3 = split.fetch(2)

@@ -6,12 +6,6 @@ class DrilldownController < ApplicationController
       drilldowns = DrilldownAdmin.take(16)
       split = drilldowns.each_slice(4).to_a
 
-      # session[:category].each do |category|
-      #   for i in 1..4 do
-      #     drilldown.push("#{category}:#{i}")
-      #   end
-      # end
-
        @drilldown1 = split.fetch(0)
        @drilldown2 = split.fetch(1)
        @drilldown3 = split.fetch(2)
