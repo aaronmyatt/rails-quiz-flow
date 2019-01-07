@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Drilldown Index</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
-  <body>
+
   <section class="section">
     <div class="container">
       <h1 class="title">
@@ -40,8 +31,8 @@
             <li>
               <div id="check-button">
                 <label>
-                  <%= check_box_tag "drilldown[]", x %>
-                  <span> <%= x.capitalize %> </span>
+                  <%= check_box_tag "drilldown[]", x.drilldown_name %>
+                  <span> <%= "#{x.category_name}:#{x.drilldown_name}" %> </span>
                 </label>
               </div>           
             </li>
@@ -56,8 +47,8 @@
             <li>
               <div id="check-button">
                 <label>
-                  <%= check_box_tag "drilldown[]", x %>
-                  <span> <%= x.capitalize %> </span>
+                  <%= check_box_tag "drilldown[]", x.drilldown_name %>
+                  <span> <%= "#{x.category_name}:#{x.drilldown_name}" %> </span>
                 </label>
               </div>
             </li>
@@ -71,8 +62,8 @@
               <li>
                 <div id="check-button">
                   <label>
-                    <%= check_box_tag "drilldown[]", x %>
-                    <span><%= x.capitalize %></span>
+                    <%= check_box_tag "drilldown[]", x.drilldown_name %>
+                    <span><%= "#{x.category_name}:#{x.drilldown_name}" %></span>
                   </label>
                 </div>
               </li>
@@ -87,8 +78,8 @@
                 <li>
                   <div id="check-button">
                     <label>
-                      <%= check_box_tag "drilldown[]", x %>
-                      <span><%= x.capitalize %></span>
+                      <%= check_box_tag "drilldown[]", x.drilldown_name %>
+                      <span><%= "#{x.category_name}:#{x.drilldown_name}" %></span>
                     </label>
                   </div>
                 </li>
@@ -102,5 +93,3 @@
     </button>
 <% end %>
 </div>
-  </body>
-</html>

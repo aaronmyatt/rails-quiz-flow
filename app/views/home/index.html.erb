@@ -1,13 +1,30 @@
-<h1>Home page</h1>
 
-<h2>Hey there,please enter your email address for more updates:</h2>
-<%= form_tag( '/home/form' , remote: true, method: 'post') do |f| %>
-<p>
-        <%= label_tag "Email Address:" %>
-        <%= email_field_tag "email" %>
-    <br>
-    <br>
-    <div>
-        <%= submit_tag 'Save' %>
+
+<section class="hero is-link is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Home page
+      </h1>
+      <h2 class="subtitle">
+        Hey there,please enter your email address for more updates:
+      </h2>
+
+        <div class="columns">
+            <div class="column">
+                <%= form_tag( '/home/form' , remote: true, method: 'post') do |f| %>
+                <p>
+                    <%= label_tag "Email Address:" %>
+                    <%= email_field_tag "email" %>
+                </p>
+            </div>
+            <div class="column">
+                <div id="add-button">
+                    <button class="button is-success submit">Log In</button>
+                </div>
+            </div>
+            <% end %>        
+        </div>              
     </div>
-<% end %>
+  </div>
+</section>

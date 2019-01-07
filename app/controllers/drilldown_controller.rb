@@ -2,16 +2,14 @@ class DrilldownController < ApplicationController
   def index
 
       drilldown = []
-      session[:category].each do |category|
-        for i in 1..4 do
-          drilldown.push("#{category}drilldown#{i}")
-        end
-      end
 
-       @drilldown1 = drilldown[0..3]
-       @drilldown2 = drilldown[4..7]
-       @drilldown3 = drilldown[8..11]
-       @drilldown4 = drilldown[12..15]
+      drilldowns = DrilldownAdmin.take(16)
+      split = drilldowns.each_slice(4).to_a
+
+       @drilldown1 = split.fetch(0)
+       @drilldown2 = split.fetch(1)
+       @drilldown3 = split.fetch(2)
+       @drilldown4 = split.fetch(3)
        
   end
 

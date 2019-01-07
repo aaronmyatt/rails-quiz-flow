@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_21_031457) do
+ActiveRecord::Schema.define(version: 2019_01_03_045507) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -20,12 +20,34 @@ ActiveRecord::Schema.define(version: 2018_12_21_031457) do
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
+  create_table "category_admins", force: :cascade do |t|
+    t.string "name"
+    t.string "added_by", default: "Undefined"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "drilldown_admins", force: :cascade do |t|
+    t.string "category_name"
+    t.string "drilldown_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "drilldowns", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_drilldowns_on_user_id"
+  end
+
+  create_table "question_admins", force: :cascade do |t|
+    t.string "category_name", default: "Related Category"
+    t.string "drilldown_name"
+    t.text "question"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "questions", force: :cascade do |t|

@@ -1,0 +1,2 @@
+module QuestionAdminHelper
+end

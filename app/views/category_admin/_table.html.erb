@@ -1,0 +1,33 @@
+
+  <h3 class="title is-3">Category Admin Dashboard</h3>
+  <%= form_with model: @category_admin, local: true do |category_admin| %>
+  <table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="ID">ID</abbr></th>
+      <th><abbr title="Category Name">Category Name</abbr></th>
+      <th><abbr title="Added By">Added By</abbr></th>
+      <th>Options</th>
+      <th>
+        <div id="add-button">
+          <button class="button is-success"><%= link_to "Add Category", "new", id: 'link-color' %></button>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @category_admins.each do |cat_admin| %>
+    <tr>
+      <th><%= cat_admin.id %></th>
+      <td><%= cat_admin.name %></td>
+      <td><%= cat_admin.added_by %></td>
+      <td> <button class="button is-primary"><%= link_to 'Edit', edit_category_admin_path(cat_admin), id: 'link-color'%></button>
+      <button class="button is-danger"><%= link_to 'Destroy', category_admin_index_path(cat_admin),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, id: 'link-color' %></button>   
+      </td>      
+   </tr>
+   <% end %>
+  </tbody>
+</table>
+<% end %>

@@ -1,0 +1,21 @@
+
+  <h3 class="title is-3">Create New Category</h3>
+   <%= form_with model: @category_admin,url: {action: "create"} do |form| %> 
+    <table class="table">
+      <thead>
+        <tr>
+          <th><abbr title="Category Name">Category Name</abbr></th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> <%= form.text_field :name %></td>
+          <td> 
+          <button class="button is-success submit">Create</button>
+          </td>
+        </tr>
+        </tbody>
+    </table>
+   <% end %>
+  
