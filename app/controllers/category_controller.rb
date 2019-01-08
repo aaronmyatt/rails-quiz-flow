@@ -12,9 +12,7 @@ class CategoryController < ApplicationController
   end
 
   def form
-    category_names = params.keys
-    category_names.pop(2)
-    category_names.delete_if {|x| x>= "utf8"}
+    category_names = params[:category]
     category_names.each do |category|
       name = Category.create(name: category, user_id: session[:user]) 
     end
