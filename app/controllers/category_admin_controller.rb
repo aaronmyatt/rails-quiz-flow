@@ -16,9 +16,8 @@ class CategoryAdminController < ApplicationController
   end
 
   def create
-    create_category_admins = CategoryAdmin.new(name: params["name"])
-    # redirect_to category_admin_index_path
-    # redirect_to category_admin_index_path
+    create_category_admins = CategoryAdmin.create(name: params["name"])
+
     if create_category_admins.save
       redirect_to create_category_admins
     else
