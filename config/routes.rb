@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'home/index'
-  get 'questions/index'
-  get 'drilldown/index' 
-  get 'category/index'
-  get 'recommendation/index'
+  get 'category', to: 'category#index', as: :category
+  get 'drilldown', to: 'drilldown#index', as: :drilldown 
+  get 'questions', to: 'questions#index', as: :questions
+  get 'recommendation', to: 'recommendation#index', as: :recommendation
 
   resources :category_admin
   resources :drilldown_admin
