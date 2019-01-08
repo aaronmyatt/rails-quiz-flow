@@ -14,7 +14,7 @@ class DrilldownController < ApplicationController
   end
 
   def form
-    drilldown_session = session[:drilldown]=params[:drilldown]
+    drilldown_session = params[:drilldown]
     drilldown_session.each do |drilldown|
       name = Drilldown.create(name: drilldown, user_id: session[:user])
     end

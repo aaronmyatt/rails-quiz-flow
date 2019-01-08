@@ -11,10 +11,9 @@ Rails.application.routes.draw do
   get 'category/index'
   get 'recommendation/index'
 
-  get 'category_admin/index'
   resources :category_admin
   resources :drilldown_admin
-  get 'category_admin/new'
+  resources :question_admin
 
   post 'home/form'
   post 'questions/form'
@@ -24,5 +23,4 @@ Rails.application.routes.draw do
   post "drilldown_admin/new"
   post "category_admin/new"
 
-  resources :question_admin
 end

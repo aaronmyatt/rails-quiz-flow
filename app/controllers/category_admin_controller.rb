@@ -18,6 +18,7 @@ class CategoryAdminController < ApplicationController
   def create
     create_category_admins = CategoryAdmin.new(name: params["name"])
     # redirect_to category_admin_index_path
+    # redirect_to category_admin_index_path
     if create_category_admins.save
       redirect_to create_category_admins
     else
@@ -35,7 +36,7 @@ class CategoryAdminController < ApplicationController
     end
   end
   def destroy 
-    delete_category_admins = CategoryAdmin.find(params[:format])
+    delete_category_admins = CategoryAdmin.find(params[:id])
     delete_category_admins.destroy
     redirect_to category_admin_index_path
   end

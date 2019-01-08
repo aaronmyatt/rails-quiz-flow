@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
   end
 
   def form
-    question_session = session[:questions] = params[:questions]
+    question_session = params[:questions]
     question_session.each do |key, value|
       question_details = Question.create(name: key, rating: value, user_id: session[:user])
     end

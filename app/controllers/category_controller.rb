@@ -15,7 +15,6 @@ class CategoryController < ApplicationController
     category_names = params.keys
     category_names.pop(2)
     category_names.delete_if {|x| x>= "utf8"}
-    session[:category] = category_names
     category_names.each do |category|
       name = Category.create(name: category, user_id: session[:user]) 
     end
