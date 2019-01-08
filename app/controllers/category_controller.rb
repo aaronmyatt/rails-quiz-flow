@@ -18,6 +18,6 @@ class CategoryController < ApplicationController
     category_names.each do |category|
       name = Category.create(name: category, user_id: session[:user]) 
     end
-    redirect_to '/drilldown/index'
+    redirect_to drilldown_path
   end
 end

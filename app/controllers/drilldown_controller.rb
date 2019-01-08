@@ -18,6 +18,6 @@ class DrilldownController < ApplicationController
     drilldown_session.each do |drilldown|
       name = Drilldown.create(name: drilldown, user_id: session[:user])
     end
-    redirect_to "/questions/index"
+    redirect_to questions_path
   end
 end
