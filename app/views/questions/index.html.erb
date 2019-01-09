@@ -22,10 +22,10 @@
   <div class = "columns">
     <div class = "column">
       <ul>
-        <% @questions1.each do |q| %>
+        <% @questions1.each do |question| %>
           <li>
-            <%= label_tag "#{q.drilldown_name}:#{q.question}" %>
-            <%= select_tag "questions[#{q.question}]", options_for_select(1..10, 5) %>
+            <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+            <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
             <br>
             <br>
           </li>
@@ -34,10 +34,10 @@
     </div>
     <div class = "column">
       <ul>
-        <% @questions2.each do |q| %>
+        <% @questions2.each do |question| %>
           <li>
-          <%= label_tag "#{q.drilldown_name}:#{q.question}" %>
-          <%= select_tag "questions[#{q.question}]", options_for_select(1..10, 5) %>
+          <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+          <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
           <br>
           <br>
           </li>
@@ -46,10 +46,10 @@
     </div>
     <div class = "column">
       <ul>    
-        <% @questions3.each do |q| %>
+        <% @questions3.each do |question| %>
           <li>        
-            <%= label_tag "#{q.drilldown_name}:#{q.question}" %>
-            <%= select_tag "questions[#{q.question}]", options_for_select(1..10, 5) %>
+            <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+            <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
             <br>
             <br>
           </li>
@@ -58,10 +58,10 @@
     </div>
     <div class = "column">
       <ul>
-        <% @questions4.each do |q| %>
+        <% @questions4.each do |question| %>
         <li>
-          <%= label_tag "#{q.drilldown_name}:#{q.question}" %>
-          <%= select_tag "questions[#{q.question}]", options_for_select(1..10, 5) %>
+          <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+          <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
           <br>
           <br>
         </li>

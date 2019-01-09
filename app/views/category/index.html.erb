@@ -25,12 +25,12 @@
     <div class = "column">
     
     <ul>
-    <% @columns1.each do |x| %>
+    <% @columns1.each do |category| %>
     <li>
     <div id="check-button">
       <label>
-         <%= check_box_tag "category[]", x.name  %> 
-          <span><%= x.name %></span>  
+         <%= check_box_tag "category[]", category.name  %> 
+          <span><%= category.name %></span>  
       </label>
      
       </div>
@@ -41,12 +41,12 @@
       </div>
     <div class = "column">
     <ul>
-      <% @columns2.each do |x| %>
+      <% @columns2.each do |category| %>
         <li>
           <div id="check-button">
             <label>
-              <%= check_box_tag "category[]", x.name %>
-              <span><%= x.name %></span>  
+              <%= check_box_tag "category[]", category.name %>
+              <span><%= category.name %></span>  
             </label>
           </div>
         </li>
@@ -55,12 +55,12 @@
     </div>
     <div class = "column">
     <ul>
-      <% @columns3.each do |x| %>
+      <% @columns3.each do |category| %>
         <li>
           <div id="check-button">
             <label>
-              <%= check_box_tag "category[]", x.name %>
-              <span><%= x.name %></span>  
+              <%= check_box_tag "category[]", category.name %>
+              <span><%= category.name %></span>  
             </label>
           </div>
         </li>
@@ -69,12 +69,12 @@
   </div>
   <div class = "column">
   <ul>
-    <% @columns4.each do |x| %>
+    <% @columns4.each do |category| %>
       <li>
         <div id="check-button">
             <label>
-              <%= check_box_tag "category[]", x.name %>
-              <span><%= x.name %></span>  
+              <%= check_box_tag "category[]", category.name %>
+              <span><%= category.name %></span>  
             </label>
           </div>
       </li>

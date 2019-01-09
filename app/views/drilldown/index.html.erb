@@ -27,12 +27,12 @@
         <div class = "columns">
         <div class = "column">
         <ul>
-          <% @drilldown1.each do |x| %>
+          <% @drilldown1.each do |drilldown| %>
             <li>
               <div id="check-button">
                 <label>
-                  <%= check_box_tag "drilldown[]", x.drilldown_name %>
-                  <span> <%= "#{x.category_name}:#{x.drilldown_name}" %> </span>
+                  <%= check_box_tag "drilldown[]", drilldown.drilldown_name %>
+                  <span> <%= "#{drilldown.category_name}:#{drilldown.drilldown_name}" %> </span>
                 </label>
               </div>           
             </li>
@@ -43,12 +43,12 @@
           <div class = "column">
 
           <ul>
-          <% @drilldown2.each do |x| %>
+          <% @drilldown2.each do |drilldown| %>
             <li>
               <div id="check-button">
                 <label>
-                  <%= check_box_tag "drilldown[]", x.drilldown_name %>
-                  <span> <%= "#{x.category_name}:#{x.drilldown_name}" %> </span>
+                  <%= check_box_tag "drilldown[]", drilldown.drilldown_name %>
+                  <span> <%= "#{drilldown.category_name}:#{drilldown.drilldown_name}" %> </span>
                 </label>
               </div>
             </li>
@@ -58,12 +58,12 @@
 
             <div class = "column">
             <ul>
-             <% @drilldown3.each do |x| %>
+             <% @drilldown3.each do |drilldown| %>
               <li>
                 <div id="check-button">
                   <label>
-                    <%= check_box_tag "drilldown[]", x.drilldown_name %>
-                    <span><%= "#{x.category_name}:#{x.drilldown_name}" %></span>
+                    <%= check_box_tag "drilldown[]", drilldown.drilldown_name %>
+                    <span><%= "#{drilldown.category_name}:#{drilldown.drilldown_name}" %></span>
                   </label>
                 </div>
               </li>
@@ -74,12 +74,12 @@
               <div class = "column">
 
               <ul>
-               <% @drilldown4.each do |x| %>
+               <% @drilldown4.each do |drilldown| %>
                 <li>
                   <div id="check-button">
                     <label>
-                      <%= check_box_tag "drilldown[]", x.drilldown_name %>
-                      <span><%= "#{x.category_name}:#{x.drilldown_name}" %></span>
+                      <%= check_box_tag "drilldown[]", drilldown.drilldown_name %>
+                      <span><%= "#{drilldown.category_name}:#{drilldown.drilldown_name}" %></span>
                     </label>
                   </div>
                 </li>
