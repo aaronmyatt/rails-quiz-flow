@@ -15,7 +15,7 @@ class QuestionsController < ApplicationController
   def form
     question_params = params[:questions]
     question_params.each do |key, value|
-      question_details = Question.create(name: key, rating: value, user_id: session[:user])
+      question_details = Question.create(name: key, rating: value, user_id: User.last.id)
     end
     redirect_to recommendation_path
   end

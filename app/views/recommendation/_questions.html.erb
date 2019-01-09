@@ -1,7 +1,7 @@
 <ol>
-  <% questions_list.each do |questions,rating|  %>
+  <% questions_list.each do |question|  %>
     <li>
-        <%= questions %>: with a rating of  <%= rating %>
+        <%= question.name %>: with a rating of  <%= question.rating %>
     </li>
     <% end %>
 </ol>
