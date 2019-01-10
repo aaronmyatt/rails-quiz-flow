@@ -14,10 +14,10 @@ class DrilldownController < ApplicationController
   end
 
   def form
-    drilldown_session = session[:drilldown]=params[:drilldown]
-    drilldown_session.each do |drilldown|
-      name = Drilldown.create(name: drilldown, user_id: session[:user])
+    drilldown_names = params[:drilldown]
+    drilldown_names.each do |drilldown|
+      name = Drilldown.create(name: drilldown, user_id: User.last.id)
     end
-    redirect_to "/questions/index"
+    redirect_to questions_path
   end
 end

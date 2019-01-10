@@ -38,7 +38,7 @@ class DrilldownAdminController < ApplicationController
   end
 
   def destroy 
-    delete_drilldown_admins = DrilldownAdmin.find(params[:format])
+    delete_drilldown_admins = DrilldownAdmin.find(params[:id])
     delete_drilldown_admins.destroy
     redirect_to drilldown_admin_index_path
   end

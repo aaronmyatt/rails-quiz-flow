@@ -1,28 +1,23 @@
 Rails.application.routes.draw do
 
-  get 'drilldown_admin/index'
+
   resources :user
 
   root 'home#index'
 
   get 'home/index'
-  get 'questions/index'
-  get 'drilldown/index' 
-  get 'category/index'
-  get 'recommendation/index'
+  get 'category', to: 'category#index', as: :category
+  get 'drilldown', to: 'drilldown#index', as: :drilldown 
+  get 'questions', to: 'questions#index', as: :questions
+  get 'recommendation', to: 'recommendation#index', as: :recommendation
 
-  get 'category_admin/index'
-  resources :category_admin
-  resources :drilldown_admin
-  get 'category_admin/new'
+  resources :category_admin, path: '/admin/category'
+  resources :drilldown_admin, path: '/admin/drilldown'
+  resources :question_admin, path: '/admin/question'
 
   post 'home/form'
   post 'questions/form'
   post 'category/form'
   post 'drilldown/form'
-  post "category_admin/index"
-  post "drilldown_admin/new"
-  post "category_admin/new"
 
-  resources :question_admin
 end

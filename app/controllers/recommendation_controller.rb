@@ -1,8 +1,11 @@
 class RecommendationController < ApplicationController
   def index
-    @category = session[:category]
-    @drilldown = session[:drilldown]
-    @questions = session[:questions]
+
+    user = User.find_by(id: session[:user])
+    @category = user.categories
+    @drilldown = user.drilldowns
+    @questions = user.questions
+
   
   end
 end

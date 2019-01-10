@@ -8,10 +8,10 @@
       </h1>
       <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
         <ul>
-          <li><a href="/category/index" >Category</a></li>
-          <li ><a href="/drilldown/index" >Drilldown</a></li>
-          <li class="is-active"><a href="/questions/index" aria-current="page">Questions</a></li>
-          <li><a href="/reccomendation/index">Reccomendation</a></li>
+          <li><a href="/category" >Category</a></li>
+          <li ><a href="/drilldown" >Drilldown</a></li>
+          <li class="is-active"><a href="/questions" aria-current="page">Questions</a></li>
+          <li><a href="/recommendation">Recommendation</a></li>
         </ul>
       </nav>
       </div>
@@ -22,10 +22,10 @@
   <div class = "columns">
     <div class = "column">
       <ul>
-        <% @questions1.each do |q| %>
+        <% @questions1.each do |question| %>
           <li>
-            <%= label_tag "#{q.drilldown_name}:#{q.question}" %>
-            <%= select_tag "questions[#{q.question}]", options_for_select(1..10, 5) %>
+            <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+            <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
             <br>
             <br>
           </li>
@@ -34,10 +34,10 @@
     </div>
     <div class = "column">
       <ul>
-        <% @questions2.each do |q| %>
+        <% @questions2.each do |question| %>
           <li>
-          <%= label_tag "#{q.drilldown_name}:#{q.question}" %>
-          <%= select_tag "questions[#{q.question}]", options_for_select(1..10, 5) %>
+          <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+          <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
           <br>
           <br>
           </li>
@@ -46,10 +46,10 @@
     </div>
     <div class = "column">
       <ul>    
-        <% @questions3.each do |q| %>
+        <% @questions3.each do |question| %>
           <li>        
-            <%= label_tag "#{q.drilldown_name}:#{q.question}" %>
-            <%= select_tag "questions[#{q.question}]", options_for_select(1..10, 5) %>
+            <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+            <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
             <br>
             <br>
           </li>
@@ -58,10 +58,10 @@
     </div>
     <div class = "column">
       <ul>
-        <% @questions4.each do |q| %>
+        <% @questions4.each do |question| %>
         <li>
-          <%= label_tag "#{q.drilldown_name}:#{q.question}" %>
-          <%= select_tag "questions[#{q.question}]", options_for_select(1..10, 5) %>
+          <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+          <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
           <br>
           <br>
         </li>

@@ -10,8 +10,7 @@
       <th>Options</th>
       <th>
         <div id="add-button">
-          <button class="button is-success"><%= link_to "Add Category", "new", id: 'link-color' %></button>
-        </div>
+          <button class="button is-success"><%= link_to "Add Category", new_category_admin_path, id: 'link-color' %></button>
       </th>
     </tr>
   </thead>
@@ -22,7 +21,7 @@
       <td><%= cat_admin.name %></td>
       <td><%= cat_admin.added_by %></td>
       <td> <button class="button is-primary"><%= link_to 'Edit', edit_category_admin_path(cat_admin), id: 'link-color'%></button>
-      <button class="button is-danger"><%= link_to 'Destroy', category_admin_index_path(cat_admin),
+      <button class="button is-danger"><%= link_to 'Destroy', category_admin_path(cat_admin),
               method: :delete,
               data: { confirm: 'Are you sure?' }, id: 'link-color' %></button>   
       </td>      
