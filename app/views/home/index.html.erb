@@ -1,30 +1,34 @@
 
-
-<section class="hero is-link is-fullheight">
+<div class="background-wall">
+<section class="hero is-fullheight" >
   <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
+    <div class="container has-text-centered">
+        <div class="logo">
+        </div>
+    <div class="text-format">
+      <h1 class="title has-text-white">
         Home page
       </h1>
-      <h2 class="subtitle">
+      <h2 class="subtitle has-text-white">
         Hey there,please enter your email address for more updates:
       </h2>
+      <br>
 
-        <div class="columns">
-            <div class="column">
-                <%= form_tag( '/home/form' , remote: true, method: 'post') do |f| %>
+        <div class="container">
+            <%= form_tag( '/home/form' , remote: true, method: 'post') do |f| %>
                 <p>
                     <%= label_tag "Email Address:" %>
-                    <%= email_field_tag "email" %>
+                    <div class="email">
+                        <input class="input" name ="email" type="email" placeholder="youremail@domain.com">
+                    </div>
+                    <div class="submit-button">
+                        <button class="button is-success submit is-fullwidth">Log In</button>
+                    </div>
                 </p>
-            </div>
-            <div class="column">
-                <div id="add-button">
-                    <button class="button is-success submit">Log In</button>
-                </div>
-            </div>
-            <% end %>        
-        </div>              
+            <% end %>                
+        </div>
+        </div>
     </div>
   </div>
 </section>
+</div>
