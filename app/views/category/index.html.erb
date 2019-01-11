@@ -12,74 +12,155 @@
           <li><a href="/recommendation">Recommendation</a></li>
         </ul>
       </nav>
-
     </div>
 <br>
 
-    <div class="container" >
-
-
+<div class="container" >
 <%= form_tag( '/category/form' , remote: true, method: 'post') do |f| %>
 
-    <div class = "columns">
-    <div class = "column">
+
+<%# <div class="columns is-multiline is-gapless">
+  <div class="column is-3">
+    <p class= "notification is-primary">
+      First column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-danger">
+      Second column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification">
+      Third column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-success">
+      Fourth column
+    </p>
+  </div>
+    <div class="column is-3">
+    <p class= "notification is-info">
+      First column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-primary">
+      Second column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-danger">
+      Third column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification">
+      Fourth column
+    </p>
+  </div>
+    <div class="column is-3">
+    <p class= "notification is-success">
+      First column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-info">
+      Second column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-primary">
+      Third column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-primary">
+      Fourth column
+    </p>
+  </div>
+    <div class="column is-3">
+    <p class= "notification is-primary">
+      First column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-primary">
+      Second column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-primary">
+      Third column
+    </p>
+  </div>
+  <div class="column is-3">
+    <p class= "notification is-primary">
+      Fourth column
+    </p>
+  </div>
+</div> %>
+
+    <div class = "columns is-multiline is-mobile is-gapless">
+    <div class = "column is-narrow">
     
-    <ul>
+    
     <% @columns1.each do |category| %>
-    <li>
+  
     <div id="check-button">
       <label>
          <%= check_box_tag "category[]", category.name  %> 
           <span><%= category.name %></span>  
       </label>
-     
       </div>
-      
-    </li>
+
+    
+
     <% end %>
-    </ul>
+    
       </div>
-    <div class = "column">
-    <ul>
+    <div class = "column is-narrow">
+    
       <% @columns2.each do |category| %>
-        <li>
+        
           <div id="check-button">
             <label>
               <%= check_box_tag "category[]", category.name %>
               <span><%= category.name %></span>  
             </label>
           </div>
-        </li>
+        
       <% end %>
-    </ul>
+    
     </div>
-    <div class = "column">
-    <ul>
+    <div class = "column is-narrow">
+    
       <% @columns3.each do |category| %>
-        <li>
+        
           <div id="check-button">
             <label>
               <%= check_box_tag "category[]", category.name %>
               <span><%= category.name %></span>  
             </label>
           </div>
-        </li>
+        
       <% end %>
-    </ul>
+    
   </div>
-  <div class = "column">
-  <ul>
+  <div class = "column is-narrow">
+  
     <% @columns4.each do |category| %>
-      <li>
+      
         <div id="check-button">
             <label>
               <%= check_box_tag "category[]", category.name %>
               <span><%= category.name %></span>  
             </label>
           </div>
-      </li>
+      
     <% end %>
-  </ul>
+  
 </div>
 
   </div>
@@ -88,7 +169,6 @@
       Save
   </button>
   </div>
-
-
+  </div>
 <% end %>
   
