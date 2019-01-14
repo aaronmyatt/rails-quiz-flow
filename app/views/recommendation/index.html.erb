@@ -1,11 +1,11 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title has-text-white">
          Based On The Given Input
 
       </h1>
-      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-large" aria-label="breadcrumbs">
         <ul>
           <li><a href="/category" >Category</a></li>
           <li ><a href="/drilldown" >Drilldown</a></li>
@@ -18,7 +18,7 @@
 
     <div class="container">
 
-      <p class="subtitle">
+      <p class="subtitle has-text-white">
        <strong>The Smartest Reccomendation For You Would Be For You To Have The Honour Of Consuming The Following Products </strong>
        <div class = "column">
        <%= render "products" %>
@@ -31,16 +31,18 @@
 
        <div class = "columns">
         <div class = "column">
-          <p class="subtitle">
+          <p class="subtitle has-text-white">
           <strong> The Categories you have chosen: </strong>
           <div class = "column">
+          <div class="white-color">
           <%= render partial: "categories", locals: {category_list: @category} %>
+          </div>
           </div>
           </p>
         </div>
 
       <div class = "column">
-        <p class="subtitle">
+        <p class="subtitle has-text-white">
         <strong>The Drilldowns for the chosen Categories:</strong>
         <div class = "column">
         <%= render partial: "drilldowns", locals: {drilldown_list: @drilldown} %>
@@ -49,7 +51,7 @@
       </div>
 
       <div class = "column">
-        <p class="subtitle">
+        <p class="subtitle has-text-white">
         <strong>The Questions and their ratings for the selected drilldowns:</strong>
         <div class = "column">
         <%= render partial: "questions", locals: {questions_list: @questions} %>

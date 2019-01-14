@@ -1,12 +1,12 @@
 
     <section class="section">
         <div class="container">
-      <h1 class="title">
+      <h1 class="title has-text-white">
 
        Please Answer The Following Questions
 
       </h1>
-      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-large" aria-label="breadcrumbs">
         <ul>
           <li><a href="/category" >Category</a></li>
           <li ><a href="/drilldown" >Drilldown</a></li>
@@ -24,10 +24,12 @@
       <ul>
         <% @questions1.each do |question| %>
           <li>
+          <div class = "white-text">
             <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
             <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
             <br>
             <br>
+          </div>
           </li>
         <% end %>
       </ul>
@@ -36,10 +38,12 @@
       <ul>
         <% @questions2.each do |question| %>
           <li>
+          <div class = "white-text">
           <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
           <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
           <br>
           <br>
+          </div>
           </li>
         <% end %>
       </ul>
@@ -47,11 +51,13 @@
     <div class = "column">
       <ul>    
         <% @questions3.each do |question| %>
-          <li>        
+          <li>   
+          <div class = "white-text">     
             <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
             <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
             <br>
             <br>
+          </div>
           </li>
         <% end %>
       </ul>
@@ -60,17 +66,19 @@
       <ul>
         <% @questions4.each do |question| %>
         <li>
+        <div class = "white-text">
           <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
           <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
           <br>
           <br>
+        </div>
         </li>
           <% end %>
       </ul>
     </div>
 </div>
    <button class="button is-link">
-        Save
+        Next
     </button>
 <% end %>
 
