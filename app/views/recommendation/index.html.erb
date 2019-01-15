@@ -18,20 +18,23 @@
 
     <div class="container">
 
-      <p class="subtitle has-text-white">
+      <p class="subtitle">
        <strong>The Smartest Reccomendation For You Would Be For You To Have The Honour Of Consuming The Following Products </strong>
        <div class = "column">
        <%= render "products" %>
        </div>
         <br>
-       The Smart Reccomendation Engine Has Faith In You & The Reccomended Products.<strong>Good Luck </strong>.
+        <div class = "white-text">
+        The Smart Reccomendation Engine Has Faith In You & The Reccomended Products.
+        <strong>Good Luck.</strong>
+        </div>
 
       </p>
       <br>
 
        <div class = "columns">
         <div class = "column">
-          <p class="subtitle has-text-white">
+          <p class="subtitle">
           <strong> The Categories you have chosen: </strong>
           <div class = "column">
           <div class="white-color">
@@ -42,7 +45,7 @@
         </div>
 
       <div class = "column">
-        <p class="subtitle has-text-white">
+        <p class="subtitle">
         <strong>The Drilldowns for the chosen Categories:</strong>
         <div class = "column">
         <%= render partial: "drilldowns", locals: {drilldown_list: @drilldown} %>
@@ -51,7 +54,7 @@
       </div>
 
       <div class = "column">
-        <p class="subtitle has-text-white">
+        <p class="subtitle">
         <strong>The Questions and their ratings for the selected drilldowns:</strong>
         <div class = "column">
         <%= render partial: "questions", locals: {questions_list: @questions} %>
