@@ -19,8 +19,8 @@
 
 
 <%= form_tag( '/questions/form' , remote: true, method: 'post') do |f| %>
-<div class="accordion">Category 1</div>
-<div class="panel">
+
+  <div class = white-text>
   <ul>
     <% @questions1.each do |question| %>
       <li>
@@ -40,10 +40,9 @@
       </li>
     <% end %>
   </ul>
-</div>
+  </div>
 
-<div class="accordion">Category 2</div>
-<div class="panel">
+<div class = white-text>
   <ul>
     <% @questions2.each do |question| %>
       <li>
@@ -65,8 +64,7 @@
   </ul>
 </div>
 
-<div class="accordion">Category 3</div>
-<div class="panel">
+<div class = white-text>
   <ul>    
     <% @questions3.each do |question| %>
       <li>       
@@ -88,8 +86,7 @@
   </ul>
 </div>
 
-<div class="accordion">Category 4</div>
-<div class="panel">
+<div class = white-text>
   <ul>
     <% @questions4.each do |question| %>
       <li>
@@ -115,23 +112,6 @@
         Next
     </button>
 <% end%>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });   
-}
-</script>
 
 <script>
 var slider = document.getElementById("myRange");
