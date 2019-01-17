@@ -15,72 +15,131 @@
         </ul>
       </nav>
       </div>
-    </section>
+    </section>  
 
-    <div class="container">
+
 <%= form_tag( '/questions/form' , remote: true, method: 'post') do |f| %>
-  <div class = "columns">
-    <div class = "column">
-      <ul>
-        <% @questions1.each do |question| %>
-          <li>
-          <div class = "white-text">
-            <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-            <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
-            <br>
-            <br>
+<div class="accordion">Category 1</div>
+<div class="panel">
+  <ul>
+    <% @questions1.each do |question| %>
+      <li>
+        <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+          <div class="slidecontainer">
+            <%= range_field_tag "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %>
+              <p>Value: 
+                <span id="demo">
+
+                </span> 
+          
+                </p>
+      
           </div>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class = "column">
-      <ul>
-        <% @questions2.each do |question| %>
-          <li>
-          <div class = "white-text">
-          <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-          <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
-          <br>
-          <br>
+        <br>
+        <br>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="accordion">Category 2</div>
+<div class="panel">
+  <ul>
+    <% @questions2.each do |question| %>
+      <li>
+      <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+      <div class="slidecontainer">
+            <%= range_field_tag "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %>
+              <p>Value: 
+                <span id="demo">
+
+                </span> 
+          
+                </p>
+      
           </div>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class = "column">
-      <ul>    
-        <% @questions3.each do |question| %>
-          <li>   
-          <div class = "white-text">     
-            <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-            <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
-            <br>
-            <br>
+      <br>
+      <br>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="accordion">Category 3</div>
+<div class="panel">
+  <ul>    
+    <% @questions3.each do |question| %>
+      <li>       
+        <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+       <div class="slidecontainer">
+            <%= range_field_tag "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %>
+              <p>Value: 
+                <span id="demo">
+
+                </span> 
+          
+                </p>
+      
           </div>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class = "column">
-      <ul>
-        <% @questions4.each do |question| %>
-        <li>
-        <div class = "white-text">
-          <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-          <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
-          <br>
-          <br>
-        </div>
-        </li>
-          <% end %>
-      </ul>
-    </div>
+        <br>
+        <br>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="accordion">Category 4</div>
+<div class="panel">
+  <ul>
+    <% @questions4.each do |question| %>
+      <li>
+        <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+       <div class="slidecontainer">
+            <%= range_field_tag "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %>
+              <p>Value: 
+                <span id="demo">
+
+                </span> 
+          
+                </p>
+      
+          </div>
+        <br>
+        <br>
+      </li>
+    <% end %>
+  </ul>
+</div>
 </div>
    <button class="button is-link is-rounded is-large">
         Next
     </button>
-<% end %>
+<% end%>
 
-</div>
- 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });   
+}
+</script>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
