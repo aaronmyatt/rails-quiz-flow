@@ -17,6 +17,7 @@ class QuestionsController < ApplicationController
     question_params.each do |key, value|
       question_details = Question.create(name: key, rating: value, user_id: User.last.id)
     end
+    
     redirect_to recommendation_path
   end
 
