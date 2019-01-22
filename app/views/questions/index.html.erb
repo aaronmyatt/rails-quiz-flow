@@ -25,23 +25,19 @@
     <% @questions1.each do |question| %>
       <li>
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-          <div class = "radios" id="radios">
-            <div class="labelz">  
-            <%# <%= range_field_tag "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %>
-            <label for="input1"></label>
+            
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
     
-            <label for="input2"></label>
+            
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
-            <label for="input3"></label>
+            
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
-            <label for="input4"></label>
+            
             <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
-            <label for="input5"></label>
+            
             <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
-            <span id="slider"></span>
-            </div>
-          </div>
+           
+        
         <br>
         <br>
       </li>
@@ -54,22 +50,17 @@
     <% @questions2.each do |question| %>
       <li>
       <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-       <div class = "radios" id="radios">
-            <div class="labelz">  
-            <%# <%= range_field_tag "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %>
-            <label for="input1"></label>
+            
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
     
-            <label for="input2"></label>
+            
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
-            <label for="input3"></label>
+            
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
-            <label for="input4"></label>
+            
             <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
-            <label for="input5"></label>
+            
             <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
-            <span id="slider"></span>
-            </div>
       <br>
       <br>
       </li>
@@ -82,22 +73,17 @@
     <% @questions3.each do |question| %>
       <li>       
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-        <div class = "radios" id="radios">
-            <div class="labelz">  
-            <%# <%= range_field_tag "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %>
-            <label for="input1"></label>
+            
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
     
-            <label for="input2"></label>
+            
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
-            <label for="input3"></label>
+            
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
-            <label for="input4"></label>
+            
             <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
-            <label for="input5"></label>
+            
             <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
-            <span id="slider"></span>
-            </div>
         <br>
         <br>
       </li>
@@ -110,22 +96,17 @@
     <% @questions4.each do |question| %>
       <li>
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-        <div class = "radios" id="radios">
-            <div class="labelz">  
-            <%# <%= range_field_tag "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %>
-            <label for="input1"></label>
+            
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
     
-            <label for="input2"></label>
+            
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
-            <label for="input3"></label>
+            
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
-            <label for="input4"></label>
+            
             <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
-            <label for="input5"></label>
+            
             <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
-            <span id="slider"></span>
-            </div>
         <br>
         <br>
       </li>
@@ -143,34 +124,5 @@
 <br>
 <br>
 <br>
-
-
-<%# <div class ="has-text-white" id = "radios">
- <% @questions1.each do |question| %>
- 
-<%# <%= label_tag "#{question.drilldown_name}:#{question.question}" %> %>
-<br>
- 
-<%# <%= radio_button "questions[#{question.question}]", options_for_select(1..10, 5),class: "slider", type: "range", id: "myRange", min: "1", max: "10" %> %>
-
-
-</div>
-
-      <%# <div id="radios">
-        <div class="labelz">
-        <label for="input1"></label>
-        <input  id="input1" name="radio" type="radio" />
-        <label for="input2"></label>
-        <input  id="input2" name="radio" type="radio" />
-        <label for="input3"></label>
-        <input  id="input3" name="radio" type="radio" />
-        <label for="input4"></label>
-        <input  id="input4" name="radio" type="radio" />
-        <label for="input5"></label>
-        <input  id="input5" name="radio" type="radio" />
-        <span id="slider"></span>
-        </div> %>
-<%# </div> %>
-
 
 
