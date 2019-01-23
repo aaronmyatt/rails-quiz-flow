@@ -2,12 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// html {
+//   background-image: url(space-background.jpg);
+// }
+
+html{
+  background: url(space-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+nav.breadcrumb li.is-active a {
+  color:white;
+}
+
+nav.breadcrumb a {
+  color: turquoise;
+}
+
+nav.breadcrumb a:hover{
+  text-decoration: underline;
+  color: white;
+}
 
 #check-button {
   margin: 4px;
   width: 150px;
   background-color: #EFEFEF;
-  border-radius: 4px;
+  border-radius: 25px;
   border: 1px solid #D0D0D0;
   overflow: auto;
   &:hover {
@@ -16,7 +40,7 @@
   label {
     span {
       text-align: center;
-      padding: 3px 0px;
+      padding: 25px 0px;
       display: block;
     }
     input {
@@ -26,7 +50,13 @@
     }
   }
   input:checked + span {
-    background-color: #4286f4;
+    // background-color: rgb(66, 64, 194);
     color: #fff;
+    background-image: linear-gradient(-45deg,#1F077F,#350C87 50%,#086D8C);
   }
-}
+ }
+
+ button.button.is-link{
+  position: absolute;
+  right: 50%;
+ }

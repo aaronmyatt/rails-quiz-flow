@@ -1,17 +1,21 @@
 
-  <section class="section">
+<section class="section">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title has-text-white">
        Please Choose The Area You Would Like To Improve
       </h1>
-      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-large" aria-label="breadcrumbs">
         <ul>
-          <li class="is-active"><a href="/category" aria-current="page">Category</a></li>
+          <li class="is-active"> <a href="/category" aria-current="page">Category</a></li>
           <li><a href="/drilldown">Drilldown</a></li>
           <li><a href="/questions">Questions</a></li>
           <li><a href="/recommendation">Recommendation</a></li>
         </ul>
       </nav>
+
+      <h3 class="subtitle has-text-white">
+         Please choose only 4 options
+      </h3>
 
     </div>
 <br>
@@ -21,7 +25,7 @@
 
 <%= form_tag( '/category/form' , remote: true, method: 'post') do |f| %>
 
-    <div class = "columns">
+    <div class = "columns is-centered">
     <div class = "column">
     
     <ul>
@@ -84,11 +88,11 @@
 
   </div>
   <br>
-  <button class="button is-link ">
-      Save
+  <button class="button is-link is-rounded is-large">
+      Next
   </button>
   </div>
 
 
 <% end %>
-  
+

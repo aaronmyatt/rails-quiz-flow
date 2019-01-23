@@ -22,7 +22,7 @@
       <td><%= question.category_name %></td>
       <td><%= question.drilldown_name %></td>
       <td><%= question.question %></td>
-      <td> <button class="button is-primary"><%= link_to 'Edit', edit_question_admin_path(question), id: 'link-color'%></button>
+      <td> <button class="button is-success"><%= link_to 'Edit', edit_question_admin_path(question), id: 'link-color'%></button>
         <button class="button is-danger">
           <%= link_to 'Destroy', question_admin_path(question),
                 method: :delete,

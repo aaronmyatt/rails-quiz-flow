@@ -1,11 +1,11 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title has-text-white">
          Based On The Given Input
 
       </h1>
-      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-large" aria-label="breadcrumbs">
         <ul>
           <li><a href="/category" >Category</a></li>
           <li ><a href="/drilldown" >Drilldown</a></li>
@@ -24,7 +24,10 @@
        <%= render "products" %>
        </div>
         <br>
-       The Smart Reccomendation Engine Has Faith In You & The Reccomended Products.<strong>Good Luck </strong>.
+        <div class = "white-text">
+        The Smart Reccomendation Engine Has Faith In You & The Reccomended Products.
+        <strong>Good Luck.</strong>
+        </div>
 
       </p>
       <br>
@@ -34,7 +37,9 @@
           <p class="subtitle">
           <strong> The Categories you have chosen: </strong>
           <div class = "column">
+          <div class="white-color">
           <%= render partial: "categories", locals: {category_list: @category} %>
+          </div>
           </div>
           </p>
         </div>

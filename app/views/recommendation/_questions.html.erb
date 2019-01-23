@@ -1,7 +1,9 @@
-<ol>
-  <% questions_list.each do |question|  %>
-    <li>
-        <%= question.name %>: with a rating of  <%= question.rating %>
-    </li>
-    <% end %>
-</ol>
+<div class = "white-text">
+    <ol>
+    <% questions_list.each do |question|  %>
+        <li>
+            <%= question.name %>: with a rating of  <%= question.rating %>
+        </li>
+        <% end %>
+    </ol>
+</div>

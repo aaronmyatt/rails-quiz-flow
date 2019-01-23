@@ -1,12 +1,13 @@
 
+    
     <section class="section">
         <div class="container">
-      <h1 class="title">
+      <h1 class="title has-text-white">
 
        Please Answer The Following Questions
 
       </h1>
-      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-large" aria-label="breadcrumbs">
         <ul>
           <li><a href="/category" >Category</a></li>
           <li ><a href="/drilldown" >Drilldown</a></li>
@@ -14,65 +15,120 @@
           <li><a href="/recommendation">Recommendation</a></li>
         </ul>
       </nav>
-      </div>
-    </section>
+        
+<div class = "center-content">
 
-    <div class="container">
 <%= form_tag( '/questions/form' , remote: true, method: 'post') do |f| %>
-  <div class = "columns">
-    <div class = "column">
-      <ul>
-        <% @questions1.each do |question| %>
-          <li>
-            <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-            <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
-            <br>
-            <br>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class = "column">
-      <ul>
-        <% @questions2.each do |question| %>
-          <li>
-          <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-          <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
-          <br>
-          <br>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class = "column">
-      <ul>    
-        <% @questions3.each do |question| %>
-          <li>        
-            <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-            <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
-            <br>
-            <br>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class = "column">
-      <ul>
-        <% @questions4.each do |question| %>
-        <li>
-          <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
-          <%= select_tag "questions[#{question.question}]", options_for_select(1..10, 5) %>
-          <br>
-          <br>
-        </li>
-          <% end %>
-      </ul>
-    </div>
+
+  <div class = white-text>
+  <ul>
+    <% @questions1.each do |question| %>
+      <li>
+        <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+        <br>
+        <br>
+            
+            <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
+ 
+            <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
+            
+            <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
+            
+            <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
+            
+            <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
+           
+        
+        <br>
+        <br>
+      </li>
+    <% end %>
+  </ul>
+  </div>
+
+<div class = white-text>
+  <ul>
+    <% @questions2.each do |question| %>
+      <li>
+      <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+      <br>
+      <br>
+            
+            <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
+           
+            <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
+            
+            <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
+            
+            <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
+            
+            <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
+      <br>
+      <br>
+      </li>
+    <% end %>
+  </ul>
 </div>
-   <button class="button is-link">
-        Save
+
+<div class = white-text>
+  <ul>    
+    <% @questions3.each do |question| %>
+      <li>       
+        <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+        <br>
+        <br>
+            
+            <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
+           
+            <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
+            
+            <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
+            
+            <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
+            
+            <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
+        <br>
+        <br>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class = white-text>
+  <ul>
+    <% @questions4.each do |question| %>
+      <li>
+        <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+        <br>
+        <br>
+            
+            <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
+         
+            <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
+            
+            <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
+            
+            <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
+            
+            <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
+        <br>
+        <br>
+      </li>
+    <% end %>
+  </ul>
+</div>
+</div>
+</div>
+   <button class="button is-link is-rounded is-large">
+        Next
     </button>
-<% end %>
+<% end%>
 
 </div>
- 
+</section>
+
+<br>
+<br>
+<br>
+
+
