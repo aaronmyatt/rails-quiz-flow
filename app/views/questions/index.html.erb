@@ -16,7 +16,7 @@
         </ul>
       </nav>
         
-
+<div class = "center-content">
 
 <%= form_tag( '/questions/form' , remote: true, method: 'post') do |f| %>
 
@@ -25,10 +25,11 @@
     <% @questions1.each do |question| %>
       <li>
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+        <br>
+        <br>
             
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
-    
-            
+ 
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
             
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
@@ -50,10 +51,11 @@
     <% @questions2.each do |question| %>
       <li>
       <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+      <br>
+      <br>
             
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
-    
-            
+           
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
             
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
@@ -73,10 +75,11 @@
     <% @questions3.each do |question| %>
       <li>       
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+        <br>
+        <br>
             
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
-    
-            
+           
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
             
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
@@ -96,10 +99,11 @@
     <% @questions4.each do |question| %>
       <li>
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
+        <br>
+        <br>
             
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
-    
-            
+         
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
             
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
@@ -114,10 +118,12 @@
   </ul>
 </div>
 </div>
+</div>
    <button class="button is-link is-rounded is-large">
         Next
     </button>
 <% end%>
+
 </div>
 </section>
 
