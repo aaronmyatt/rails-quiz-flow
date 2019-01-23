@@ -1,4 +1,4 @@
-<div class = "bg-image"></div>  
+
     <section class="section">
         <div class="container">
       <h1 class="title has-text-white">
@@ -20,6 +20,7 @@
 <%= form_tag( '/questions/form' , remote: true, method: 'post') do |f| %>
 
   <div class = white-text-questions>
+
   <ul>
     <% @questions1.each do |question| %>
       <li>
@@ -45,7 +46,9 @@
   </ul>
   </div>
 
+
 <div class = white-text-questions>
+
   <ul>
     <% @questions2.each do |question| %>
       <li>
@@ -69,7 +72,9 @@
   </ul>
 </div>
 
+
 <div class = white-text-questions>
+
   <ul>    
     <% @questions3.each do |question| %>
       <li>       
@@ -93,7 +98,9 @@
   </ul>
 </div>
 
+
 <div class = white-text-questions>
+
   <ul>
     <% @questions4.each do |question| %>
       <li>
@@ -118,7 +125,6 @@
 </div>
 </div>
 </div>
-
 
    <button class="button is-link is-rounded is-large">
         Next
