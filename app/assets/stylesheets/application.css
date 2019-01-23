@@ -22,3 +22,56 @@
     text-decoration: none;
     color: initial;
 }
+
+html 
+{
+    background-image: url(bubble-quiz-blur.jpg);
+    background-size: cover;
+}
+
+nav.breadcrumb li.is-active a {
+    color:white;
+  }
+  
+  nav.breadcrumb a {
+    color: turquoise;
+  }
+  
+  nav.breadcrumb a:hover{
+    text-decoration: underline;
+    color: white;
+  }
+
+  .white-text{
+    color: white;
+  }
+  
+  .white-text strong {
+    color: white;
+  }
+
+  #check-button label span{
+
+    display: block;
+    width: auto;
+    margin-bottom: 10%;
+    border-radius: 100px;
+    color: #fff;
+    background-color: rgba(0,0,0, .30);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    transition: all 0.5s ease-out;
+      }
+  
+   #check-button label input{
+      display: none;
+    }
+
+  
+    #check-button label input:checked + span {
+        color: steelblue;
+        background-color: white;
+        transition: all 0.3s ease-in;
+    }
