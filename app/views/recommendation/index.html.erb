@@ -3,7 +3,6 @@
     <div class="container">
       <h1 class="title has-text-white">
          Based On The Given Input
-
       </h1>
       <nav class="breadcrumb has-succeeds-separator is-large" aria-label="breadcrumbs">
         <ul>
@@ -17,8 +16,7 @@
   </section>
 
     <div class="container">
-
-      <p class="subtitle">
+      <p class="subtitle has-text-white">
        <strong>The Smartest Reccomendation For You Would Be For You To Have The Honour Of Consuming The Following Products </strong>
        <div class = "column">
        <%= render "products" %>
@@ -27,11 +25,9 @@
         <div class = "white-text">
         The Smart Reccomendation Engine Has Faith In You & The Reccomended Products.
         <strong>Good Luck.</strong>
-        </div>
-
+         </div>
       </p>
       <br>
-
        <div class = "columns">
         <div class = "column">
           <p class="subtitle">
@@ -39,7 +35,7 @@
           <div class = "column">
           <div class="white-color">
           <%= render partial: "categories", locals: {category_list: @category} %>
-          </div>
+           </div>
           </div>
           </p>
         </div>
@@ -64,4 +60,5 @@
     </div>
 
 </div>
+
   

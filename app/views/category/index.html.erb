@@ -1,6 +1,8 @@
 
 <section class="section">
     <div class="container">
+    
+
       <h1 class="title has-text-white">
        Please Choose The Area You Would Like To Improve
       </h1>
@@ -15,13 +17,10 @@
 
       <h3 class="subtitle has-text-white">
          Please choose only 4 options
-      </h3>
-
-    </div>
+      </h3>   
 <br>
-
-    <div class="container" >
-
+<br>
+<br>
 
 <%= form_tag( '/category/form' , remote: true, method: 'post') do |f| %>
 
@@ -85,14 +84,18 @@
     <% end %>
   </ul>
 </div>
+</div>
 
-  </div>
+  
   <br>
-  <button class="button is-link is-rounded is-large">
+  <button class="button is-link is-rounded">
       Next
   </button>
-  </div>
 
 
 <% end %>
+
+</div>
+</div>
+
 

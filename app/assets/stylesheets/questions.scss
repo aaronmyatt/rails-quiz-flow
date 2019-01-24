@@ -4,10 +4,19 @@
 
 // @import "compass/css3";
 
-.white-text{
+
+.white-text-questions{
   color: white;
   text-align: center;
   font-size: 24px;
+  font-family: Opensans;
+}
+
+.white-text-questions strong{
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-family: Opensans;
 }
 
 button.button.is-primary{
@@ -27,28 +36,28 @@ button.button.is-primary{
   margin:0 40px;
   width: 24px;
   height: 24px;
-  background: #eeeeee;
-  box-shadow:
-    inset 0 0 0 .4em white,
-    0 0 0 .3em;
+  background: rgba(0,0,0, .30);
+  // box-shadow:
+  //   inset 0 0 0 .4em rgba(0,0,0, .30),
+  //   0 0 0 .3em;
   border-radius: 50%;
   transition: .2s;
   cursor:pointer;
-  color: #363945;
+  color: steelblue;
 
   &:hover,
   &:checked {
-    background: #363945;
+    background: steelblue;
     box-shadow:
     inset 0 0 0 .6em white,
-    0 0 0 .3em;
+    0 0 0 .3em steelblue;
   }
   
   &:checked {
-    background: #56be8e;
+    background: steelblue;
     box-shadow:
       inset 0 0 0 .4em white,
-      0 0 0 .3em #56be8e;
+      0 0 0 .3em steelblue;
   } 
 
   &:focus { outline: 0; }
