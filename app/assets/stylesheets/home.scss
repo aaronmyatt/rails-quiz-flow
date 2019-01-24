@@ -1,3 +1,45 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.background-wall{
+  background: url(space-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.logo {
+  background: url(logo_small.png) no-repeat center;
+  margin-bottom: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+}
+
+.text-format {
+  color: white;
+}
+
+.title {
+  color: white;
+}
+
+.subtitle {
+  color: white;
+}
+
+.email {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.submit-button {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+
