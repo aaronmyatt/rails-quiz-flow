@@ -29,6 +29,17 @@ html
     background-size: cover;
 }
 
+h1.title
+{
+font-family: Gilroy;
+}
+
+.subtitle
+{
+font-family: Opensans;
+}
+
+
 nav.breadcrumb li.is-active a {
     color:white;
   }
@@ -44,16 +55,19 @@ nav.breadcrumb li.is-active a {
 
   .white-text{
     color: white;
+    font-family: Opensans;
   }
   
   .white-text strong {
     color: white;
+    font-family: Opensans;
   }
 
   #check-button label span{
 
-    display: block;
-    width: auto;
+    display: inline-block;
+    /* width: auto; */
+    padding: 15px;
     margin-bottom: 10%;
     border-radius: 100px;
     color: #fff;
@@ -75,3 +89,8 @@ nav.breadcrumb li.is-active a {
         background-color: white;
         transition: all 0.3s ease-in;
     }
+
+  button.button.is-link
+  {
+    width: 240px;
+  }
