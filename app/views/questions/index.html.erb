@@ -27,7 +27,7 @@
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
         <br>
         <br>
-            
+            <label  align ="left"><strong>DISAGREE</strong></label>
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
  
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
@@ -37,7 +37,7 @@
             <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
             
             <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
-           
+           <label align = "right"><strong>AGREE</strong></label>
         
         <br>
         <br>
@@ -55,7 +55,7 @@
       <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
       <br>
       <br>
-            
+            <label  align ="left"><strong>DISAGREE</strong></label>
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
            
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
@@ -65,6 +65,7 @@
             <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
             
             <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
+            <label  align ="left"><strong>AGREE</strong></label>
       <br>
       <br>
       </li>
@@ -81,7 +82,7 @@
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
         <br>
         <br>
-            
+            <label  align ="left"><strong>DISAGREE</strong></label>
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
            
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
@@ -91,6 +92,7 @@
             <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
             
             <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
+            <label  align ="left"><strong>AGREE</strong></label>
         <br>
         <br>
       </li>
@@ -107,23 +109,30 @@
         <%= label_tag "#{question.drilldown_name}:#{question.question}" %>
         <br>
         <br>
+        <label  align ="left"><strong>DISAGREE</strong></label>
             
             <%= radio_button("questions","#{question.question}","1", id: "input1")  %>
+            
          
             <%= radio_button("questions","#{question.question}","2", id: "input2")   %>
             
+            
             <%= radio_button("questions","#{question.question}","3", id: "input3")  %>
+           
             
             <%= radio_button("questions","#{question.question}","4", id: "input4")  %>
             
+            
             <%= radio_button("questions","#{question.question}","5", id: "input5")  %>
+            <label  align ="left"><strong>AGREE</strong></label>
+            
         <br>
         <br>
       </li>
     <% end %>
   </ul>
 </div>
-</div>
+
 
 <br>
 
@@ -131,6 +140,8 @@
    <button class="button is-link is-rounded">
         Next
     </button>
+    
+</div>
 </div>
 <% end%>
 
