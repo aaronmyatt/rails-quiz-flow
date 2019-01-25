@@ -39,20 +39,6 @@ font-family: Gilroy;
 font-family: Opensans;
 }
 
-
-nav.breadcrumb li.is-active a {
-    color:white;
-  }
-  
-  nav.breadcrumb a {
-    color: turquoise;
-  }
-  
-  nav.breadcrumb a:hover{
-    text-decoration: underline;
-    color: white;
-  }
-
   .white-text{
     color: white;
     font-family: Opensans;
@@ -68,7 +54,8 @@ nav.breadcrumb li.is-active a {
     display: inline-block;
     /* width: auto; */
     padding: 15px;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
+    margin-right: 18px;
     border-radius: 100px;
     color: #fff;
     background-color: rgba(0,0,0, .30);
@@ -94,4 +81,10 @@ nav.breadcrumb li.is-active a {
   {
     width: 240px;
   }
+
   
+.flex-container{
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap; 
+}
