@@ -7,6 +7,7 @@ class HomeController < ApplicationController
     user = User.new(email: params["email"])
     user.save
     session[:user] = user.id
+
     redirect_to category_path
 
     
