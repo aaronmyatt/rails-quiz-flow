@@ -4,6 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "bulma-extensions": "^4.0.1",
+    "bulma-steps-component": "^0.5.3",
     "gulp": "^4.0.0"
   },
   "devDependencies": {
