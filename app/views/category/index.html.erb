@@ -6,13 +6,13 @@
       <h1 class="title has-text-white">
        Please Choose The Area You Would Like To Improve
       </h1>
-      <ul class="progressbar">
+      <ul class="progressbar" style = "align: left;">
       
             <li class="active">Category</li>
             <li>Drilldown</li>
             <li>Questions</li>
             <li>Recommendation</li>
-      </i>
+      
       </ul> 
 
         <br>
@@ -26,81 +26,35 @@
 
 <%= form_tag( '/category/form' , remote: true, method: 'post') do |f| %>
 
-    <div class = "columns is-centered">
-    <div class = "column">
+  
+ <div class = "flex-container">
     
-    <ul>
-    <% @columns1.each do |category| %>
-    <li>
+
+    
+    <% @columns.each do |category| %>
+    
     <div id="check-button">
       <label>
          <%= check_box_tag "category[]", category.name  %> 
           <span><%= category.name %></span>  
       </label>
-     
-      </div>
-      
-    </li>
+     </div> 
+    
     <% end %>
-    </ul>
-      </div>
-    <div class = "column">
-    <ul>
-      <% @columns2.each do |category| %>
-        <li>
-          <div id="check-button">
-            <label>
-              <%= check_box_tag "category[]", category.name %>
-              <span><%= category.name %></span>  
-            </label>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-    </div>
-    <div class = "column">
-    <ul>
-      <% @columns3.each do |category| %>
-        <li>
-          <div id="check-button">
-            <label>
-              <%= check_box_tag "category[]", category.name %>
-              <span><%= category.name %></span>  
-            </label>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-  <div class = "column">
-  <ul>
-    <% @columns4.each do |category| %>
-      <li>
-        <div id="check-button">
-            <label>
-              <%= check_box_tag "category[]", category.name %>
-              <span><%= category.name %></span>  
-            </label>
-          </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
-</div>
-
+    
   
+  </div>  
   <br>
+  
+
   <button class="button is-link is-rounded">
       Next
   </button>
 
 
 <% end %>
-<div class = "white-text">
 
 </div>
-
-</div>
-</div>
+</section>
 
 

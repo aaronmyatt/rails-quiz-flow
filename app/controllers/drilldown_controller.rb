@@ -1,15 +1,19 @@
 class DrilldownController < ApplicationController
   def index
 
-      drilldown = []
+      # drilldown = []
 
-      drilldowns = DrilldownAdmin.take(16)
-      split = drilldowns.each_slice(4).to_a
+      # drilldowns = DrilldownAdmin.take(16)
+      # split = drilldowns.each_slice(4).to_a
 
-       @drilldown1 = split.fetch(0)
-       @drilldown2 = split.fetch(1)
-       @drilldown3 = split.fetch(2)
-       @drilldown4 = split.fetch(3)
+      #  @drilldown1 = split.fetch(0)
+      #  @drilldown2 = split.fetch(1)
+      #  @drilldown3 = split.fetch(2)
+      #  @drilldown4 = split.fetch(3)
+
+       drilldowns = DrilldownAdmin.all
+    
+       @drilldowns = drilldowns
        
   end
 

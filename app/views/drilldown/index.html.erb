@@ -16,81 +16,34 @@
       <h3 class="subtitle has-text-white">
          Please choose only 4 options
       </h3>
-    </div>
-  </section>
+    
+  
 <br>
 <br>
 
-    <div class="container">
+    
 
 <%= form_tag( '/drilldown/form' , remote: true, method: 'post') do |f| %>
 
-        <div class = "columns">
-        <div class = "column">
-        <ul>
-          <% @drilldown1.each do |drilldown| %>
-            <li>
+        <div class="flex-container">
+        
+          <% @drilldowns.each do |drilldown| %>
+            
               <div id="check-button">
                 <label>
                   <%= check_box_tag "drilldown[]", drilldown.drilldown_name %>
                   <span> <%= "#{drilldown.category_name} #{drilldown.drilldown_name}" %> </span>
                 </label>
               </div>           
-            </li>
+            
           <% end %>
-        </ul>
-          </div>
+             
+    </div>
 
-          <div class = "column">
-
-          <ul>
-          <% @drilldown2.each do |drilldown| %>
-            <li>
-              <div id="check-button">
-                <label>
-                  <%= check_box_tag "drilldown[]", drilldown.drilldown_name %>
-                  <span> <%= "#{drilldown.category_name} #{drilldown.drilldown_name}" %> </span>
-                </label>
-              </div>
-            </li>
-            <% end %>
-        </ul>
-            </div>
-
-            <div class = "column">
-            <ul>
-             <% @drilldown3.each do |drilldown| %>
-              <li>
-                <div id="check-button">
-                  <label>
-                    <%= check_box_tag "drilldown[]", drilldown.drilldown_name %>
-                    <span><%= "#{drilldown.category_name} #{drilldown.drilldown_name}" %></span>
-                  </label>
-                </div>
-              </li>
-              <% end %>
-          </ul>
-              </div>
-
-              <div class = "column">
-
-              <ul>
-               <% @drilldown4.each do |drilldown| %>
-                <li>
-                  <div id="check-button">
-                    <label>
-                      <%= check_box_tag "drilldown[]", drilldown.drilldown_name %>
-                      <span><%= "#{drilldown.category_name} #{drilldown.drilldown_name}" %></span>
-                    </label>
-                  </div>
-                </li>
-                <% end %>
-            </ul>
-                </div>
-</div>
     <br>
     <button class="button is-link is-rounded ">
         Next
     </button>
 <% end %>
 </div>
+</section>
